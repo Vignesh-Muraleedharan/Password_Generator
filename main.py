@@ -12,7 +12,7 @@ def generate_password(length, special_char):
     return password
 
 #User Input
-length = int(input("Enter the length of the password: "))
+length = st.slider("Password Length", min_value=6, max_value=20, value=10, step=1)
 special_char = input("Contain special characters? (y/n): ").lower()
 
 #Generate and print the password
