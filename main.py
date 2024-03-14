@@ -9,7 +9,7 @@ st.write("""
 def generate_password(length, special_char):
     chr = string.ascii_letters + string.digits
     password = ''
-    if (special_char == 'y'):
+    if (special_char == 'Yes'):
         chr += string.punctuation
     for i in range(length):
         password += random.choice(chr)
@@ -21,4 +21,4 @@ special_char = st.radio("Contain special characters?", ("Yes", "No"))
 
 #Generate and print the password
 password = generate_password(length, special_char)
-print("Generated password:", password)
+st.write("Generated Password: ", password)
