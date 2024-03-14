@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 import string
-st.Title("""
+st.title("""
          Password Generator
          """
          )
