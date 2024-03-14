@@ -5,6 +5,7 @@ st.write("""
          Password Generator
          """
          )
+
 def generate_password(length, special_char):
     chr = string.ascii_letters + string.digits
     password = ''
@@ -16,7 +17,7 @@ def generate_password(length, special_char):
 
 #User Input
 length = st.slider("Password Length", min_value=6, max_value=20, value=10, step=1)
-special_char = input("Contain special characters? (y/n): ").lower()
+special_char = st.radio("Contain special characters?", ("Yes", "No"))
 
 #Generate and print the password
 password = generate_password(length, special_char)
