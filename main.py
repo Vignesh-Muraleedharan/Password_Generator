@@ -1,7 +1,10 @@
 import streamlit as st
 import random
 import string
-
+st.write("""
+         # Password Generator
+         """
+         )
 def generate_password(length, special_char):
     chr = string.ascii_letters + string.digits
     password = ''
