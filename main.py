@@ -16,7 +16,7 @@ def generate_password(length, special_char):
     return password
 
 #User Input
-length = st.slider("Password Length", min_value=6, max_value=1000, value=10, step=1)
+length = st.slider("Password Length", min_value=6, max_value=24, value=10, step=1)
 special_char = st.radio("Contain special characters?", ("Yes", "No"))
 
 #Generate and print the password
