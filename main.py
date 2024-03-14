@@ -7,8 +7,10 @@ st.title("""
          )
 
 def generate_password(length, special_char):
-    chr = string.ascii_letters + string.digits
+    chr = string.ascii_letters
     password = ''
+    if (num == 'Yes'):
+        chr += string.digits
     if (special_char == 'Yes'):
         chr += string.punctuation
     for i in range(length):
@@ -18,7 +20,7 @@ def generate_password(length, special_char):
 #User Input
 length = st.slider("Password Length", min_value=6, max_value=24, value=10, step=1)
 special_char = st.radio("Contain special characters?", ("Yes", "No"))
-
+num = st.radio("Contain numbers?", ("Yes", "No"))
 #Generate and print the password
 password = generate_password(length, special_char)
 st.write("Generated Password: ", password)
