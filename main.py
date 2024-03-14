@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import string
 st.write("""
-         # Password Generator
+         Password Generator
          """
          )
 def generate_password(length, special_char):
