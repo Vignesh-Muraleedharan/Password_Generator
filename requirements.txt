@@ -1,2 +1,4 @@
 streamlit>=1.32.0
 pyperclip>=1.8.2
+xclip
+libgtk-3-dev
