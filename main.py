@@ -1,7 +1,6 @@
 import streamlit as st
 import random
 import string
-import pyperclip
 st.title("""
          Password Generator
          """
@@ -31,5 +30,5 @@ st.write("Generated Password: ", password)
 
 # Add copy button
 if st.button("Copy Password"):
-    pyperclip.copy(password)
-    
+        st.write("Password copied to clipboard!")
+        st.write(password)
