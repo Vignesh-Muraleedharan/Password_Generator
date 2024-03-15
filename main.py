@@ -36,6 +36,6 @@ st.write("Generated Password: ", password)
 
 #st.button("🔁")
 
-if st.button("Copy to Clipboard"):
+if st.button("Copy to Clipboard", unsafe_allow_html=True):
     pyperclip.copy(password)
     st.write("Password Copied to Clipboard")
