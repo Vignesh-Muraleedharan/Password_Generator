@@ -1,6 +1,7 @@
 import streamlit as st
 import random
 import string
+import pyperclip
 
 #---STREAMLIT CONFIG HIDE---#
 hide_st_style = """<style>
@@ -33,4 +34,8 @@ num = st.radio("Contain numbers?", ("Yes", "No"))
 password = generate_password(length, special_char)
 st.write("Generated Password: ", password) 
 
-st.button("🔁")
+#st.button("🔁")
+
+if st.button("Copy to Clipboard"):
+    pyperclip.copy(password)
+    st.write("Password Copied to Clipboard")
