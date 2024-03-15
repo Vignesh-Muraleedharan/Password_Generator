@@ -4,7 +4,7 @@ import string
 st.title("""
          Password Generator
          """
-         )
+         )  
 
 def generate_password(length, special_char):
     chr = string.ascii_letters
@@ -25,3 +25,4 @@ num = st.radio("Contain numbers?", ("Yes", "No"))
 #Generate and print the password
 password = generate_password(length, special_char)
 st.write("Generated Password: ", password)
+
