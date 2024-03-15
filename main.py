@@ -11,10 +11,7 @@ hide_st_style = """<style>
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-st.title("""
-         Password Generator
-         """
-         )  
+st.title("🔒Password Generator")
 
 def generate_password(length, special_char):     
     chr = string.ascii_letters
