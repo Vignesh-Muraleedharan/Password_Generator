@@ -1,6 +1,7 @@
 import streamlit as st
 import random
 import string
+import pyperclip
 st.title("""
          Password Generator
          """
@@ -24,5 +25,11 @@ num = st.radio("Contain numbers?", ("Yes", "No"))
 
 #Generate and print the password
 password = generate_password(length, special_char)
+# Generate and print the password
+password = generate_password(length, special_char)
 st.write("Generated Password: ", password)
 
+# Add copy button
+if st.button("Copy Password"):
+    pyperclip.copy(password)
+    st.write("Password copied to clipboard!")
